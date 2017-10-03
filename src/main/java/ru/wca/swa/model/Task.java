@@ -10,10 +10,13 @@ public class Task {
 
     private String description;
 
-    private String isExecute;
+    private String executionStatus;
+
+    private String importanceStatus;
 
     @Temporal(value = TemporalType.DATE)
-    private Date date;
+    private Date lastUpdateDate;
+
 
     public int getId() {
         return id;
@@ -31,19 +34,27 @@ public class Task {
         this.description = description;
     }
 
-    public String isExecute() {
-        return isExecute;
+    public String getExecutionStatus() {
+        return executionStatus;
     }
 
-    public void setExecute(String execute) {
-        isExecute = execute;
+    public void setExecutionStatus(String executionStatus) {
+        this.executionStatus = executionStatus;
     }
 
-    public Date getDate() {
-        return date;
+    public String getImportanceStatus() {
+        return importanceStatus;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setImportanceStatus(String importanceStatus) {
+        this.importanceStatus = importanceStatus;
+    }
+
+    public Date getLastUpdateDate() {
+        return lastUpdateDate;
+    }
+
+    public void setLastUpdateDate(Date lastUpdateDate) {
+        this.lastUpdateDate = lastUpdateDate;
     }
 }
