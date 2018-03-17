@@ -1,21 +1,28 @@
 package ru.wca.swa.model;
 
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "task_list")
 public class Task {
-
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(name = "description", nullable = false)
     private String description;
 
+    @Column(name = "execution_status", nullable = false)
     private String executionStatus;
 
+    @Column(name = "importance_status", nullable = false)
     private String importanceStatus;
 
     @Temporal(value = TemporalType.DATE)
-    private Date lastUpdateDate;
+    @Column(name = "last_update_date")
+    private Date lastUpdateDate = new Date(); //или здесь нужна нестатическая инициализация? проверить на наличие ошибок
 
 
     public int getId() {
