@@ -42,7 +42,7 @@
         <property name="taskDao" ref="taskDao"/>
     </bean>
     <context:component-scan base-package="ru.wca.swa"/>
-    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <tx:annotation-driven/>
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>

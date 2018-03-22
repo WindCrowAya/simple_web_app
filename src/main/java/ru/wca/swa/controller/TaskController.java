@@ -13,7 +13,7 @@ import java.util.List;
 
 @Controller
 public class TaskController {
-    public static final int MAX_TASKS_PER_PAGE = 5;
+    private static final int MAX_TASKS_PER_PAGE = 5;
     private TaskService taskService;
     private int currentPage = 1;
     private int maxNumberOfPages;

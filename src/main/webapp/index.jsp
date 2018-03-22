@@ -5,6 +5,6 @@
     <title>Welcome to Todo List</title>
 </head>
 <body>
-    <a href="<c:url value="/tasks"/>" target="_blank">Todo List</a>
+    <a href="<c:url value="/tasks"/>" target="_blank">Click here to start "Todo List"</a>
 </body>
 </html>
